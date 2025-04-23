@@ -1,0 +1,34 @@
+# CFD Study of Flow and Mixing Patterns in Anaerobic Digesters
+
+**Project Title:** CFD Study of Flow and Mixing Patterns in Anaerobic Digesters  
+**Authors:** Sheikh Umar Aijaz, M. Waqas Ali, M. Hamza Awan, Abdul Wassay Qureshi  
+**Advisor:** Dr. M. Shakib  
+**Institution:** NED University of Engineering and Technology  
+**Date:** September 2021  
+
+---
+
+## Executive Summary  
+This project uses ANSYS Fluent to simulate 3D flow and mixing in both cylindrical and egg-shaped anaerobic digesters. We treat liquid manure as a non-Newtonian fluid (TS = 2.5%, 5.4%, 7.5%), apply a realizable k–ε turbulence model, and drive mixing via a rotating helical-blade impeller (500–700 rpm) within a Multiple Reference Frame. Key goals are to identify and minimize dead/low-velocity zones, optimize impeller placement and power input, and compare mixing strategies and tank geometries.
+
+## Objectives  
+1. Quantify flow patterns for non-Newtonian sludge at varying TS levels.  
+2. Determine the optimal impeller depth (found to be 0.914 m below the free surface) and rotational speeds.  
+3. Compare energy requirements for mechanical draft-tube mixing vs. external recirculation.  
+4. Assess the performance gap between cylindrical and egg-shaped tanks for scale-up guidance.
+
+## Methodology  
+- **Geometry & Mesh:** SolidWorks CAD of a 4,888 m³ egg-shaped digester (Dmax = 20.1 m, H = 28.3 m) plus draft tube; tetrahedral mesh (~6.4 million elements) refined around impeller and tube.  
+- **Solver Setup:** Steady-state, pressure-based; realizable k–ε; non-Newtonian power-law rheology (parameters k, n from lab data); MRF for impeller zone; slip wall at liquid surface, no-slip elsewhere.  
+- **Simulations:** Runs at 500, 600, 700 rpm; residual tolerance 1e-6; FMG initialization to accelerate convergence.
+
+## Key Results  
+- **Mixing Efficiency:** Egg-shaped digester requires 30–45% less mixing energy per unit volume than cylindrical.  
+- **Dead-Zone Reduction:** Optimal impeller depth eliminates ~90% of low-velocity zones.  
+- **Power Input:** For pilot-scale units with TS = 2.5%, 1 HP of mixing power minimizes dead zones.  
+- **Flow Scaling:** Average velocity scales linearly with rpm; mixing energy grows exponentially.
+
+## Conclusions  
+Mechanically driven draft-tube mixing in egg-shaped digesters outperforms traditional cylindrical designs and external recirculation, delivering superior uniformity and energy savings. The provided impeller placement and power-input guidelines can be directly applied to industrial biogas digesters to boost methane yield and process reliability.
+
+---
